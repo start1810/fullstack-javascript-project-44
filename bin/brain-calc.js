@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import { greeting, createDigit, askQuestion, getCorrectAnswer, getGameResult } from '../games/brain-calc.js';
+import {
+  greeting,
+  createDigit,
+  askQuestion,
+  getCorrectAnswer,
+  getGameResult
+} from '../games/brain-calc.js';
 
 const gameController = () => {
   const name = greeting();
