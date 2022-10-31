@@ -27,14 +27,14 @@ export const createDigit = () => {
 };
 
 export const askQuestion = (gameDigit) => {
-  const progression = gameDigit.progression;
+  const progression = gameDigit[progression];
 
   const iter = (counter, acc) => {
     if (counter === progression.length) {
       return acc;
     }
-    acc += `${progression[counter]} `;
-    return iter(counter + 1, acc)
+    const newAcc = acc + `${progression[counter]} `;
+    return iter(counter + 1, newAcc);
   };
   const progressionString = iter(0, '');
 

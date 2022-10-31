@@ -22,7 +22,7 @@ export const askQuestion = (gameDigit) => {
 export const getCorrectAnswer = (gameDigit) => {
   let index = 2;
   if (gameDigit === 4) {
-    return 'no'
+    return 'no';
   }
   while (index < Math.sqrt(gameDigit)) {
     if ((gameDigit % index) === 0) {
