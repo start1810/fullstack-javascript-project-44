@@ -5,7 +5,7 @@ import {
   createDigit,
   askQuestion,
   getCorrectAnswer,
-  getGameResult
+  getGameResult,
 } from '../games/brain-calc.js';
 
 const gameController = () => {
