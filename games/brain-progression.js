@@ -38,7 +38,7 @@ export const askQuestion = (gameDigit) => {
   }
   const progressionString = iter(0, '');
 
-  console.log('Find the greatest common divisor of given numbers');
+  console.log('What number is missing in the progression?');
   console.log(`Question: ${progressionString}`);
   const userAnswer = readlineSync.question('Your answer: ');
   return userAnswer;
