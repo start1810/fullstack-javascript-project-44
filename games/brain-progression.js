@@ -33,7 +33,7 @@ export const askQuestion = (gameDigit) => {
     if (counter === progression.length) {
       return acc;
     }
-    const newAcc = acc + `${progression[counter]} `;
+    const newAcc = `${acc}${progression[counter]} `;
     return iter(counter + 1, newAcc);
   };
   const progressionString = iter(0, '');
