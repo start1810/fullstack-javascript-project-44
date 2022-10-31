@@ -8,22 +8,26 @@ export const greeting = () => {
 };
 
 export const createDigit = () => {
-	const gameDigit = Math.floor(Math.random() * 100);
+	const gameDigit = Math.floor(Math.random() * 100) + 1;
 	return gameDigit;
 };
 
 export const askQuestion = (gameDigit) => {
-	console.log('Answer "yes" if the number is even, otherwise answer "no".');
+	console.log('Answer "yes" if the number is prime, otherwise answer "no".');
 	console.log(`Question: ${gameDigit}`);
 	const userAnswer = readlineSync.question('Your answer: ');
 	return userAnswer;
 };
 
 export const getCorrectAnswer = (gameDigit) => {
-	if (gameDigit % 2 === 0){
-		return 'yes';
+	let index = 2;
+	while (index < Math.sqrt(gameDigit)) {
+		if ((gameDigit % index) === 0) {
+			return 'no';
+		}
+		index += 1;
 	}
-	return 'no';
+	return 'yes';
 };
 
 export const getGameResult = (userAnswer, correctAnswer) => {
