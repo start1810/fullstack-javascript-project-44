@@ -13,7 +13,7 @@ export const createDigit = () => {
 };
 
 export const askQuestion = (gameDigit) => {
-	console.log('Answer "yes" if given number is prime, otherwise answer "no".');
+	console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 	console.log(`Question: ${gameDigit}`);
 	const userAnswer = readlineSync.question('Your answer: ');
 	return userAnswer;
