@@ -23,11 +23,11 @@ export const createDigit = () => {
   const randomIndex = Math.floor(Math.random() * (arithmeticProgression.length - 1));
   const trueAnswer = arithmeticProgression[randomIndex];
   arithmeticProgression[randomIndex] = '..';
-  return { progression: arithmeticProgression, trueAnswer };
+  return { arithmeticProgression, trueAnswer };
 };
 
 export const askQuestion = (gameDigit) => {
-  const progression = gameDigit[progression];
+  const progression = gameDigit['arithmeticProgression'];
 
   const iter = (counter, acc) => {
     if (counter === progression.length) {
