@@ -17,7 +17,7 @@ const gameController = () => {
     const correctAnswer = getCorrectAnswer(gameDigit);
     const gameResult = getGameResult(userAnswer, correctAnswer);
     if (gameResult === 'win') {
-      console.log('Correct!')
+      console.log('Correct!');
       gamePoint += 1;
     } else {
       const result = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
