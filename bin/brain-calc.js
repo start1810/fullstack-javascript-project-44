@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import {greeting, createDigit, askQuestion, getCorrectAnswer, getGameResult} from '../games/brain-calc.js';
+import { greeting, createDigit, askQuestion, getCorrectAnswer, getGameResult } from '../games/brain-calc.js';
 
 const gameController = () => {
   const name = greeting();
@@ -11,7 +11,7 @@ const gameController = () => {
     const userAnswer = askQuestion(gameDigit);
     const correctAnswer = getCorrectAnswer(gameDigit);
     const gameResult = getGameResult(userAnswer, correctAnswer);
-    if (gameResult === 'win'){
+    if (gameResult === 'win') {
       console.log('Correct!')
       gamePoint += 1;
     } else {
@@ -22,6 +22,7 @@ Let's try again, ${name}!`;
     }
   }
   console.log(`Congratulations, ${name}!`);
+  return null;
 };
 
 gameController();
