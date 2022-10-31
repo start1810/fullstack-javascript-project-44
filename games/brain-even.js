@@ -8,27 +8,27 @@ export const greeting = () => {
 };
 
 export const createDigit = () => {
-	const gameDigit = Math.floor(Math.random() * 100);
-	return gameDigit;
+  const gameDigit = Math.floor(Math.random() * 100);
+  return gameDigit;
 };
 
 export const askQuestion = (gameDigit) => {
-	console.log('Answer "yes" if the number is even, otherwise answer "no".');
-	console.log(`Question: ${gameDigit}`);
-	const userAnswer = readlineSync.question('Your answer: ');
-	return userAnswer;
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(`Question: ${gameDigit}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+  return userAnswer;
 };
 
 export const getCorrectAnswer = (gameDigit) => {
-	if (gameDigit % 2 === 0){
-		return 'yes';
-	}
-	return 'no';
+  if (gameDigit % 2 === 0) {
+    return 'yes';
+  }
+  return 'no';
 };
 
 export const getGameResult = (userAnswer, correctAnswer) => {
-	if (userAnswer === correctAnswer) {
-		return 'win';
-	}
-	return 'lose';
+  if (userAnswer === correctAnswer) {
+    return 'win';
+  }
+  return 'lose';
 };

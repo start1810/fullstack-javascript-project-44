@@ -25,7 +25,7 @@ export const askQuestion = (gameDigit) => {
 };
 
 export const getCorrectAnswer = (gameDigit) => {
-  var result = 0;
+  let result = 0;
   if (gameDigit.operation === '+') {
     result = gameDigit.firstDigit + gameDigit.secondDigit;
   } else if (gameDigit.operation === '-') {

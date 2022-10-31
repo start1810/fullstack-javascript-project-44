@@ -16,14 +16,14 @@ export const createDigit = () => {
     if (counter === progressionLength) {
       return acc;
     }
-    acc.push(acc[acc.length - 1] + generalMember)
+    acc.push(acc[acc.length - 1] + generalMember);
     return iter(counter + 1, acc);
-  }
+  };
   const arithmeticProgression = iter(0, [firstElem]);
   const randomIndex = Math.floor(Math.random() * (arithmeticProgression.length - 1));
   const trueAnswer = arithmeticProgression[randomIndex];
   arithmeticProgression[randomIndex] = '..';
-  return {progression: arithmeticProgression, trueAnswer: trueAnswer};
+  return { progression: arithmeticProgression, trueAnswer };
 };
 
 export const askQuestion = (gameDigit) => {
@@ -35,7 +35,7 @@ export const askQuestion = (gameDigit) => {
     }
     acc += `${progression[counter]} `;
     return iter(counter + 1, acc)
-  }
+  };
   const progressionString = iter(0, '');
 
   console.log('What number is missing in the progression?');
@@ -44,9 +44,7 @@ export const askQuestion = (gameDigit) => {
   return userAnswer;
 };
 
-export const getCorrectAnswer = (gameDigit) => {
-	return `${gameDigit.trueAnswer}`;
-};
+export const getCorrectAnswer = (gameDigit) => `${gameDigit.trueAnswer}`;
 
 export const getGameResult = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {

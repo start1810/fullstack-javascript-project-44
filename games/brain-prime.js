@@ -8,31 +8,34 @@ export const greeting = () => {
 };
 
 export const createDigit = () => {
-	const gameDigit = Math.floor(Math.random() * 100) + 1;
-	return gameDigit;
+  const gameDigit = Math.floor(Math.random() * 100) + 1;
+  return gameDigit;
 };
 
 export const askQuestion = (gameDigit) => {
-	console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-	console.log(`Question: ${gameDigit}`);
-	const userAnswer = readlineSync.question('Your answer: ');
-	return userAnswer;
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  console.log(`Question: ${gameDigit}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+  return userAnswer;
 };
 
 export const getCorrectAnswer = (gameDigit) => {
-	let index = 2;
-	while (index < Math.sqrt(gameDigit)) {
-		if ((gameDigit % index) === 0) {
-			return 'no';
-		}
-		index += 1;
-	}
-	return 'yes';
+  let index = 2;
+  if (gameDigit === 4) {
+    return 'no'
+  }
+  while (index < Math.sqrt(gameDigit)) {
+    if ((gameDigit % index) === 0) {
+      return 'no';
+    }
+    index += 1;
+  }
+  return 'yes';
 };
 
 export const getGameResult = (userAnswer, correctAnswer) => {
-	if (userAnswer === correctAnswer) {
-		return 'win';
-	}
-	return 'lose';
+  if (userAnswer === correctAnswer) {
+    return 'win';
+  }
+  return 'lose';
 };

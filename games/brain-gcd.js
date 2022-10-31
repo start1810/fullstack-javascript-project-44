@@ -23,11 +23,11 @@ export const askQuestion = (gameDigit) => {
 };
 
 export const getCorrectAnswer = (gameDigit) => {
-	if (gameDigit[1] === 0) {
-		return gameDigit[0];
-	}
-	return `${getCorrectAnswer([gameDigit[1], gameDigit[0] % gameDigit[1]])}`;
-  };
+  if (gameDigit[1] === 0) {
+    return gameDigit[0];
+  }
+  return `${getCorrectAnswer([gameDigit[1], gameDigit[0] % gameDigit[1]])}`;
+};
 
 export const getGameResult = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
